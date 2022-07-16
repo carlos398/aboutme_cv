@@ -1,0 +1,165 @@
+<h2>Docker</h2> 
+
+    <h2>Comandos</h2>
+        <h3>algunas flags  que podemos usar son</h3>
+
+        <ul>
+            <li> 
+            
+                -e (permite enviar variables de entorno) </li>
+                por ejemplo docker create -e POSTGRES_USERNAME=root
+                tambien funciona con docker run
+            <li> 
+                -name (permite pasar un nombre al contenedor)
+                por ejemplo docker create --name monguito mongo
+                tambien funciona con docker run
+            </li>
+
+            <li
+                "docker exec -it idcontainer sh "
+                donde podemos pasar el id del contenedor donde abriremos un sh (un shell) 
+                se ejecuta en contenedores que ya se encuentren corriendo
+            </li>
+
+            <li
+                "-d nos permite correr un contenedor en el background"
+                sera un contenedor que siempre se estara ejecutando
+                mientras lo tengamos activo en -d
+            </li>
+
+            <li
+                "docker build -t nombre ."
+                crea nuestra imagen apartir de la dockerfile y le da el nombre que le indiquemos
+            </li>
+
+        </ul>
+
+        <h3>docker pull</h3>
+
+            <p>
+                docker pull nos permite descargar una imagen sin correrla
+
+                "recuerda que puedes pasar el tag de la version que quieres, por ejemplo 'docker pull postgres:9.17' "
+            </p>
+        
+        <h3>docker images</h3>
+
+            <p>
+                nos muestra las imagenes que tenemos en nuestra maquina
+            </p>
+        
+        <h3>docker create</h3>
+
+            <p>
+                nos crea el contenedor de la imagen que le indiquemos ya sea por nombre o por id
+            </p>
+        
+        <h3>docker start</h3>
+
+            <p>
+                inicia el contenedor que le indiquemos por nombre o por id
+            </p>
+        
+        <h3>docker run</h3>
+
+            <p>
+                descarga una imagen, crea el contenedor y la pone a funcionar 
+            </p>
+        
+        <h3>docker ps y ps -a</h3>
+
+            <p>
+                nos permite ver los contenedores que tenemos y los contenedores que esten corriendo
+            </P
+
+        <h3>docker exec </h3>
+
+            <p>
+                ejecuta un comando dentro de un contenedor que se encuentre corriendo por ejemplo
+
+                "docker exec -it idcontainer sh "
+
+                donde podemos pasar el id del contenedor donde abriremos un sh (un shell) 
+            </P
+        
+        <h3>comandos completos que podriamos usar</h3>
+
+            <ul>
+                <li>
+                    docker run -d -it --name ubuntu_practica ubuntu
+                </li>
+
+                <li>
+                    docker exec ubuntu_practica sh
+                </li>
+
+                <li
+                    "docker build -t nombre ."
+                    crea nuestra imagen apartir de la dockerfile y le da el nombre que le indiquemos
+                </li>
+
+                <li
+                    
+                    "docker run -d -p 3000:3000 -v 'directorio donde se encuentran los archivos en mi maquina':/app/src(o donde apunte al final la ruta en mi maquina) nombre de la imagen"
+                    - con este comando puedes crear volumenes de los archivos que conectan la informacion de tu equipo con la informacion del contenedor sin tener que montarlo una y otra vez
+                    - una vez hayamos hecho todos los cambios debemos realizar nuevamente el build de la imagen <span> docker build -t nombre:v2 </span>
+                </li>
+
+
+            </ul>
+
+    
+    <h2>DOCKER FILE</h2>
+
+        <ul>
+            <li>
+
+                <p>
+                    primer debemos especificar en que debe basarse la imagen que crearemos, una imagen padre podria decirse
+                    <span>A esto se le conoce como FROM</span>
+                    podemos basarnos para seleccionar esta imagen padre en <a href="https>//www.hub.docker.com">docker hub</a>
+                </p>
+
+            </li>
+
+            <li>
+
+                <p>
+                    segundo debemos especificar en que carpeta dentro de nuestra imagen vamos almacenar nuestros archivos, generalmente /app
+                    <span>A esto se le conoce como WORKDIR</span>
+                </p>
+
+            </li>
+
+            <li>
+
+                <p>
+                    tercero debemos especificar que archivos debemos mover desde nuestro equipo a que carpeta del contenedor,
+                    en este caso seria . (ubicacion actual del dockerfile) a . (que hace referencia a /app)
+                    <span>A esto se le conoce como COPY</span>
+                </p>
+
+            </li>
+
+            <li>
+
+                <p>
+                    cuarto debemos especificar el comando que debe ejecutarse para comenzar acompilar nuestra imagen,
+                    por ejemplo (npm run dev) o el comando que corresponda a lo que deseamos hacer para nuestro build
+                    <span>A esto se le conoce como RUN</span>
+                </p>
+
+            </li>
+
+            <li>
+
+                <p>
+                    siempre debemos especificar un comando al final para correr nuestro programa despues de hacer el build
+                    es decir con que binario correremos nuestro programa en esta caso seria ["node", "/app/src/index.js"]
+                    <span>A esto se le conoce como CMD</span>
+                </p>
+
+            </li>
+        </ul>
+
+
