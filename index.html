@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarlosReyes</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FONT AWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Carlos<span>Reyes</span><img src="images/tree.png" alt="tree_logo"  ></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="slider">
+            <section class="slider-container">
+                <img src="images/arrow.png" alt="left_Arrow" class="left_arrow" id="before">
+
+                <section class="slider__body slider__body--show" data-id="1">
+                    <div class="slider__image">
+                        <img src="images/yop.png" alt="Tree" class="slider_first_img">
+                    </div>
+                    <div class="slider__text">
+                        <h2>Hola!, soy Carlos Reyes</h2>
+                        <p>Un desarrollador de software con conocimientos en diversas tecnologias como Django, Flask, Node, React, Express, Laravel, Vue, docker, ubuntu server y manejo de maquinas virtuales entre muchas otras, me gusta aprender todos los dias algo nuevo y trabajar en equipo, asi que si tienes interes en mi puedes ver mi cv en los proximos botones o quiza si es de tu agrado podrias acceder a algunos de mis apuntes en el otro boton.</p>
+                        <button class="curriculum">
+                            <a href="./data/CarlosReyesHDVsoftwareDeveloper.pdf" download>Curriculum</a>
+                        </button>
+                        <button class="apuntes">
+                            <a href="apuntes.html">Apuntes</a>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="slider__body" data-id="2">
+                    <div class="slider__image">
+                        <img src="images/tree.png" alt="Tree">
+                    </div>
+                    <div class="slider__text">
+                        <h2>Tree</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia, quisquam.</p>
+                    </div>
+                </section>
+
+                <section class="slider__body" data-id="3">
+                    <div class="slider__image">
+                        <img src="images/tree.png" alt="Tree">
+                    </div>
+                    <div class="slider__text">
+                        <h2>Tree</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia, quisquam.</p>
+                    </div>
+                </section>
+
+                <img src="images/arrow.png" alt="right_Arrow" class="right_arrow" id="after">
+            </section>
+        </section>
+
+        <section class="about">
+            <div class="about__container">
+                <section class="about__image">
+                    <img src="images/yop.png" alt="Tree">
+                </section>
+
+                <section class="about__text">
+                    <h2>software <span>developer</span></h2>
+
+                    <div class="tecnologies">
+                        <ul class="about__tecnologies">
+                            <li>
+                                <span><i class="fa-brands fa-python"></i></span> Python
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-rocket"></i></span> Django
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-bolt"></i></span> Flask
+                            </li>
+                        </ul>
+                        <ul class="about__tecnologies">
+                            <li>
+                                <span><i class="fa-brands fa-node-js"></i></span> Node
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-react"></i></span> React
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-node"></i></span> Express
+                            </li>
+                        </ul>
+                        <ul class="about__tecnologies">
+                            <li>
+                                <span><i class="fa-brands fa-laravel"></i></span> Laravel
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-vuejs"></i></span> Vue
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-docker"></i></span> Docker
+                            </li>
+                        </ul>
+                        <ul class="about__tecnologies">
+                            <li>
+                                <span><i class="fa-brands fa-linux"></i></span> Linux
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-server"></i></span> Mongo
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-database"></i></span> Postgres
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a class="about_btn" href="about.html">about</a>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
