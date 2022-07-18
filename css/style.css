@@ -533,6 +533,8 @@ main .about{
     }
 
     .about .about__container{
+        height: 290px;
+        top: -90px;
         grid-template-columns:  1fr;
         margin-right: 0px;
     }
