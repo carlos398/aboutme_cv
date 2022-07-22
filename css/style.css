@@ -395,7 +395,7 @@ main .about{
     
 main .proyects{
     width: 100%;
-    margin-top: 2em;
+    margin-top: 5em;
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -423,6 +423,7 @@ main .proyects{
     width: 90%;
     height: 500px;
     padding: 3em;
+    margin: auto;
     display: grid;
     grid-template-rows: 100px 1fr;
     justify-content: center;
@@ -451,6 +452,44 @@ main .proyects{
     box-shadow: #272727 3px 3px 10px;
 }
 
+.proyect__item .proyect__item__text h2{
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.proyect__item .proyect__item__text p{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.proyect__item .url_buttoms{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.url_buttoms a{
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4c776e;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.url_buttoms a i{
+    margin-right: 10px;
+}
+
 
 @media (max-width: 1270px){
 
@@ -469,6 +508,18 @@ main .proyects{
 
     .proyects__container .proyect__item{
         width: 100%;
+    }
+
+    .proyect__item .proyect__item__text h2{
+        font-size: 3em;
+    }
+    
+    .proyect__item .proyect__item__text p{
+        font-size: 1.6em;
+    }
+
+    .url_buttoms a{
+        font-size: 1em;
     }
     
 }
@@ -503,7 +554,7 @@ main .proyects{
     .proyects__container .proyect__item{
         width: 90%;
         height: 400px;
-        
+
     }
     
 }
@@ -546,6 +597,14 @@ main .proyects{
 
     .proyects__container .proyect__item{
         width: 100%;
+    }
+
+    .proyect__item .proyect__item__text h2{
+        font-size: 3em;
+    }
+    
+    .proyect__item .proyect__item__text p{
+        font-size: 1.4em;
     }
     
 }
@@ -667,4 +726,22 @@ main .proyects{
         width: 100%;
         margin: auto;
     }
+
+    .proyect__item .proyect__item__text h2{
+        font-size: 1.8em;
+    }
+
+    .proyect__item .proyect__item__text p{
+        font-size: 1.2em;
+    }
+
+    .proyect__item .url_buttoms{
+        flex-direction: column;
+    }
+
+    .url_buttoms a{
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
+    
 }
